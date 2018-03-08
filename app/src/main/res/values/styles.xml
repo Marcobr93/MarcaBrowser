@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="Theme.Base" parent="AppTheme">
+        <item name="colorPrimary">@color/MarcaThirdTextColor</item>
+        <item name="colorPrimaryDark">@color/MarcaSecondaryTextColor</item>
+        <item name="colorAccent">@color/MarcaPrimaryTextColor</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/MarcaBackgroundColor3</item>
+    </style>
+
+    <style name="Theme.Marca" parent="Theme.Base" />
+
+    <style name="ActionBarThemeOverlay" parent="">
+        <item name="android:textColorPrimary">@color/MarcaPrimaryTextColor</item>
+        <item name="colorControlHighlight">@color/MarcaBackgroundColor</item>
+        <item name="android:actionMenuTextColor">@color/MarcaPrimaryTextColor</item>
+        <item name="android:textColorSecondary">@color/MarcaPrimaryTextColor</item>
+        <item name="android:background">@color/MarcaBackgroundColor</item>
+    </style>
+
+    <style name="ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/MarcaPrimaryTextColor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

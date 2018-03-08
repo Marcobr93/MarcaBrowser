@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="MarcaPrimaryBackground">@color/md_blue_500</color>
+    <color name="MarcaSecondaryBackground">@color/md_blue_700</color>
+    <color name="MarcaColorBackgroundAccent">@color/md_pink_500</color>
+    <color name="MarcaBackgroundColor">@color/md_red_A700</color>
+    <color name="MarcaBackgroundColor2">@color/md_grey_400</color>
+    <color name="MarcaBackgroundColor3">@color/md_white_1000</color>
+    <color name="MarcaPrimaryTextColor">@color/md_white_1000</color>
+    <color name="MarcaSecondaryTextColor">@color/md_black_1000</color>
+    <color name="MarcaThirdTextColor">@color/md_white_1000</color>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>
