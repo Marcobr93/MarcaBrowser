@@ -11,7 +11,7 @@
         android:id="@+id/app_bar"
         layout="@layout/toolbar"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>

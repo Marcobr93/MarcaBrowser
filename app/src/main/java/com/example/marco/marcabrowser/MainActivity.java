@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,7 +40,6 @@ public class MainActivity extends BaseActivity {
                 MainActivity.this,
                 new ArrayList<Marca>()
         );
-
         mRecyclerView.setAdapter(mMarcaRecyclerViewAdapter);
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(
@@ -52,19 +50,19 @@ public class MainActivity extends BaseActivity {
                     public void onItemClick(View view, int position) {
                         Intent intent = new Intent(
                                 MainActivity.this,
-                                ViewPhotoDetailsActivity.class
+                                ViewNoticiaDetailsActivity.class
                         );
 
                         intent.putExtra(
-                                PHOTO_TRANSFER,
+                                MARCA_TRANSFER,
                                 mMarcaRecyclerViewAdapter.getMarca(position)
                         );
-                        startActivity( intent );
+                        startActivity(intent);
                     }
 
                     @Override
                     public void onItemLongClick(View view, int position) {
-                        Toast.makeText(MainActivity.this, "Long Tap", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                     }
                 }
         ));
@@ -75,22 +73,22 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
 
-            SharedPreferences sharedPreferences =
-                    PreferenceManager.getDefaultSharedPreferences(
-                    getApplicationContext()
-                    );
+        SharedPreferences sharedPreferences =
+                PreferenceManager.getDefaultSharedPreferences(
+                        getApplicationContext()
+                );
 
-            String query = getSavedPreferenceData(MARCA_QUERY);
+        String query = getSavedPreferenceData(MARCA_QUERY);
 
-        Log.d(LOG_TAG, "MARCA_QUERY: " + query);
-            if ( query.length() > 0) {
-                ProcessMarca processMarca = new ProcessMarca(query, true);
-                processMarca.execute();
-            }
+        if (query.length() > 0) {
+            ProcessMarca processMarca = new ProcessMarca(query, true);
+            processMarca.execute();
         }
+    }
 
     private String getSavedPreferenceData(String marcaQuery) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences sharedPreferences =
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         return sharedPreferences.getString(marcaQuery, "Real Madrid");
     }
@@ -105,11 +103,11 @@ public class MainActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if( id == R.id.menu_settings) {
+        if (id == R.id.menu_settings) {
             return true;
         }
 
-        if( id == R.id.menu_search ) {
+        if (id == R.id.menu_search) {
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
 

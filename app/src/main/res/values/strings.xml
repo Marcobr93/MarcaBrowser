@@ -9,4 +9,5 @@
     <string name="tittle">tittle</string>
     <string name="photo_detail_activity_title">Detalles de la noticia</string>
     <string name="photo_description">Descripción de la foto</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

@@ -29,7 +29,7 @@ public class GetMarcaJsonData extends GetRawData {
 
     private boolean createAndUpdateUri(String searchCriteria, boolean matchAll) {
         final String MARCA_BASE_API_URL = "https://newsapi.org/v2/everything?sources=marca&apiKey=49cf272994044489a162711525a25530";
-        final String TAGS_PARAM = "tags";
+        final String TAGS_PARAM = "q";
         final String TAGMODE_PARAM = "tagmode";
         final String FORMAT_PARAM = "format";
 

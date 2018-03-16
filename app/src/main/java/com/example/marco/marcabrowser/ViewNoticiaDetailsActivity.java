@@ -2,13 +2,15 @@ package com.example.marco.marcabrowser;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-public class ViewPhotoDetailsActivity extends BaseActivity {
+public class ViewNoticiaDetailsActivity extends BaseActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +20,14 @@ public class ViewPhotoDetailsActivity extends BaseActivity {
         activateToolbarWithBackEnabled();
 
         Intent intent = getIntent();
-        Marca marca = (Marca) intent.getSerializableExtra(PHOTO_TRANSFER);
+        Marca marca = (Marca) intent.getSerializableExtra(MARCA_TRANSFER);
 
-        TextView photoTitle = findViewById(R.id.marca_title);
-        photoTitle.setText(marca.getTitle());
+        TextView marcaTitle = findViewById(R.id.marca_title);
+        marcaTitle.setText(marca.getTitle());
 
-        TextView photoTags = findViewById(R.id.marca_description);
-        photoTags.setText(marca.getmDescription());
+        TextView marcaDescription = findViewById(R.id.marca_description);
+        marcaDescription.setText(marca.getmDescription());
+        marcaDescription.setMovementMethod(new ScrollingMovementMethod());
 
         TextView photoAuthor = findViewById(R.id.marca_author);
         photoAuthor.setText(marca.getAuthor());

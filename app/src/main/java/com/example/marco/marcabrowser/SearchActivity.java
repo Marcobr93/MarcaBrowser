@@ -1,16 +1,19 @@
 package com.example.marco.marcabrowser;
+
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class SearchActivity extends BaseActivity {
 
     public static final String MARCA_QUERY = "MARCA_QUERY";
+    private static final String LOG_TAG = SearchActivity.class.getSimpleName();
 
     private SearchView mSearchView;
 
@@ -42,6 +45,8 @@ public class SearchActivity extends BaseActivity {
                         PreferenceManager.getDefaultSharedPreferences(
                                 getApplicationContext()
                         );
+                Log.d(LOG_TAG, "MARCA_QUERY: " + query);
+
                 sharedPreferences.edit().putString(MARCA_QUERY, query).commit();
                 mSearchView.clearFocus();
 

@@ -1,8 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
 
     <style name="Theme.Base" parent="AppTheme">
         <item name="colorPrimary">@color/MarcaThirdTextColor</item>
@@ -27,4 +26,8 @@
         <item name="android:textColor">@color/MarcaPrimaryTextColor</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="Theme.Marca.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Marca.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
